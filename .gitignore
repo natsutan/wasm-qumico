@@ -1,2 +1,8 @@
 .idea
 app_client/node_modules
+
+.fake
+.ionide
+.metals
+.vscode
+app_client/public/js/bundle.js
