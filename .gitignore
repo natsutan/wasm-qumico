@@ -6,3 +6,4 @@ app_client/node_modules
 .metals
 .vscode
 app_client/public/js/bundle.js
+app_client/public/js/bundle.js
