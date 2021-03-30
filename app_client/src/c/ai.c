@@ -1,3 +1,5 @@
+#include <emscripten/emscripten.h>
+
 int x = 0;
 
 int main(void)
@@ -5,7 +7,7 @@ int main(void)
   return 0;
 }
 
-int ai(void) {
+int EMSCRIPTEN_KEEPALIVE ai(void) {
 
   if (x == 0) {
     x = 1;
