@@ -1,19 +1,19 @@
 #include <emscripten/emscripten.h>
 
-int x = 0;
+int t = 0;
 
-int main(void)
-{
+int main(void){
   return 0;
 }
 
-int EMSCRIPTEN_KEEPALIVE ai(void) {
 
-  if (x == 0) {
-    x = 1;
-    return 0;
-  } else {
-    x = 0;
-    return 1;
-  }
+
+int ai(void) {
+   if (t == 0) {
+     t = 1;
+     return 0;
+   } else {
+     t = 0;
+     return 1;
+   }
 }

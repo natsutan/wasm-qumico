@@ -1,0 +1,30 @@
+<! DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset ="utf-8" /> 
+        <title> WASM Test </title> 
+    </head> 
+    <body> 
+        <script>
+            const importObject = {
+            module: {},
+            env: {
+                memory: new WebAssembly.Memory({ initial: 256 }),
+                table: new WebAssembly.Table({ initial: 0, element: 'anyfunc' })
+            }
+            };
+
+
+            WebAssembly.instantiateStreaming(fetch("ai.wasm"), importObject).then(result =>  {
+                const value = result.instance.exports._ai();
+                console.log("ai.wasm returns" + value)
+            }).catch (err => {
+                console.log("catch ");
+                console.log(err)
+            })
+        </script>
+    </body> 
+</html>
+
+
+
